@@ -48,7 +48,7 @@ paths:
     post:
       tags:
         - comfyui
-      summary: Sends a prompt to queue
+      summary: Sends a prompt to queue si
       description: Generates an image using SDXL. Please note that the processing may
         introduce a slight delay, typically a few seconds.
       parameters:
