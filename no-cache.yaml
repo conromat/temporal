@@ -48,11 +48,11 @@ tags:
       description: Find out more
       url: http://swagger.io
 paths:
-  "/v1/comfyui/prompt":
+  "/comfyui/prompt":
     post:
       tags:
         - comfyui
-      summary: Sends a prompt to queue zo2
+      summary: Sends a prompt to queue no v1 in yaml
       description: Generates an image using SDXL. Please note that the processing may
         introduce a slight delay, typically a few seconds.
       parameters:
@@ -77,7 +77,7 @@ paths:
                 $ref: "#/components/schemas/ApiPromptResponse"
         "401":
           $ref: "#/components/responses/UnauthorizedError"
-  "/v1/comfyui/history/{prompt_id}":
+  "/comfyui/history/{prompt_id}":
     get:
       tags:
         - comfyui
@@ -107,7 +107,7 @@ paths:
                 $ref: "#/components/schemas/ApiHistoryResponse"
         "401":
           $ref: "#/components/responses/UnauthorizedError"
-  "/v1/comfyui/view":
+  "/comfyui/view":
     get:
       tags:
         - comfyui
