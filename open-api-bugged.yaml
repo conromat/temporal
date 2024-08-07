@@ -32,13 +32,13 @@ info:
   version: v1
 servers:
   - description: DEV
-    url: https://ai-api.dev.ai.platform.mattel
+    url: https://ai-api.dev.ai.platform.mattel/v1
   - description: SIT
-    url: https://ai-api.sit.ai.platform.mattel
+    url: https://ai-api.sit.ai.platform.mattel/v1
   - description: UAT
-    url: https://ai-api.uat.ai.platform.mattel
+    url: https://ai-api.uat.ai.platform.mattel/v1
   - description: PROD
-    url: https://ai-api.ai.platform.mattel
+    url: https://ai-api.ai.platform.mattel/v1
 security:
   - apiKey: []
 tags:
@@ -52,7 +52,7 @@ paths:
     post:
       tags:
         - comfyui
-      summary: Sends a prompt to queue zo2
+      summary: Sends a prompt to queue added trigger
       description: Generates an image using SDXL. Please note that the processing may
         introduce a slight delay, typically a few seconds.
       parameters:
