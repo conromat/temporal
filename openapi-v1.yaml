@@ -31,10 +31,14 @@ info:
     Authorization Header: Set the "Authorization" header to "Basic" followed by a base64-encoded string of your username and password, separated by a colon.
   version: v1
 servers:
-  - url: https://{endpoint}/comfyui
-    variables:
-      endpoint:
-        default: your-resource-name.platform.mattel
+  - description: DEV
+    url: https://ai-api.dev.ai.platform.mattel/v1/comfyui
+  - description: SIT
+    url: https://ai-api.sit.ai.platform.mattel/v1/comfyui
+  - description: UAT
+    url: https://ai-api.uat.ai.platform.mattel/v1/comfyui
+  - description: PROD
+    url: https://ai-api.ai.platform.mattel/v1/comfyui
 security:
   - apiKey: []
 tags:
