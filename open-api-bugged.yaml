@@ -32,13 +32,13 @@ info:
   version: v1
 servers:
   - description: DEV
-    url: https://ai-api.dev.ai.platform.mattel
+    url: https://ai-api.dev.ai.platform.mattel/vi/comfyui
   - description: SIT
-    url: https://ai-api.sit.ai.platform.mattel
+    url: https://ai-api.sit.ai.platform.mattel/vi/comfyui
   - description: UAT
-    url: https://ai-api.uat.ai.platform.mattel
+    url: https://ai-api.uat.ai.platform.mattel/vi/comfyui
   - description: PROD
-    url: https://ai-api.ai.platform.mattel
+    url: https://ai-api.ai.platform.mattel/vi/comfyui
 security:
   - apiKey: []
 tags:
