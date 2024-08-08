@@ -31,14 +31,26 @@ info:
     Authorization Header: Set the "Authorization" header to "Basic" followed by a base64-encoded string of your username and password, separated by a colon.
   version: v1
 servers:
-  - description: DEV
-    url: https://ai-api.dev.ai.platform.mattel
-  - description: SIT
-    url: https://ai-api.sit.ai.platform.mattel
-  - description: UAT
-    url: https://ai-api.uat.ai.platform.mattel
-  - description: PROD
-    url: https://ai-api.ai.platform.mattel
+- url: https://{endpoint}/openai
+  description: For A.I. Portal
+  variables:
+    endpoint:
+      enum:
+        - 'ai-api.dev.ai.platform.mattel'
+        - 'ai-api.sit.ai.platform.mattel'
+        - 'ai-api.uat.ai.platform.mattel'
+        - 'ai-api.ai.platform.mattel'
+      default: ai-api.dev.ai.platform.mattel
+- url: https://{endpoint}/v1/openai
+  description: For Backstage
+  variables:
+    endpoint:
+      enum:
+        - 'ai-api.dev.ai.platform.mattel'
+        - 'ai-api.sit.ai.platform.mattel'
+        - 'ai-api.uat.ai.platform.mattel'
+        - 'ai-api.ai.platform.mattel'
+      default: ai-api.dev.ai.platform.mattel
 security:
   - apiKey: []
 tags:
@@ -52,7 +64,7 @@ paths:
     post:
       tags:
         - comfyui
-      summary: Sends a prompt to queue no v1 in yaml
+      summary: Sends a prompt to queue multi server
       description: Generates an image using SDXL. Please note that the processing may
         introduce a slight delay, typically a few seconds.
       parameters:
