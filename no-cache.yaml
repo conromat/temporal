@@ -31,7 +31,7 @@ info:
     Authorization Header: Set the "Authorization" header to "Basic" followed by a base64-encoded string of your username and password, separated by a colon.
   version: v1
 servers:
-- url: https://{endpoint}/openai
+- url: https://{endpoint}
   description: For A.I. Portal
   variables:
     endpoint:
@@ -41,7 +41,7 @@ servers:
         - 'ai-api.uat.ai.platform.mattel'
         - 'ai-api.ai.platform.mattel'
       default: ai-api.dev.ai.platform.mattel
-- url: https://{endpoint}/v1/openai
+- url: https://{endpoint}/v1
   description: For Backstage
   variables:
     endpoint:
@@ -64,7 +64,7 @@ paths:
     post:
       tags:
         - comfyui
-      summary: Sends a prompt to queue multi server
+      summary: Sends a prompt to queue multi server no openapi
       description: Generates an image using SDXL. Please note that the processing may
         introduce a slight delay, typically a few seconds.
       parameters:
